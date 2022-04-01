@@ -43,9 +43,14 @@
             }
         },
         created() {
-            const film = films.find(film => film.id === this.$route.params.id);
+            //params.id - string, film.id - number => поэтому ==  
+            const film = films.find(film => film.id == this.$route.params.id);
+
             if (film) {
                 this.film = film
+            }else {
+                alert('Запрашиваемого фильма нету')
+                this.$router.push({name:'films'})
             }
         }
     }

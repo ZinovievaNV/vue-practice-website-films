@@ -22,10 +22,11 @@ export default {
   },
   data() {
     return {
-    
+    userId:null
     };
+    
   },
-  
+ 
 };
 </script>
 
